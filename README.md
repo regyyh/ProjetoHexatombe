@@ -513,7 +513,7 @@ Usado sob a [Licença da Comunidade](https://ordemparanormal.com.br/licenca).
 | `dist/public/medo.jpg` | Símbolo do elemento Medo | Twitter/X (comunidade) | ⚠️ a preencher — símbolo © Rafael Lange |
 | `dist/public/atributos.png` | Diagrama hexagonal "ATRIBUTOS" | Identidade visual oficial do RPG | Projeto gráfico: Dan Ramos / Jambô — © Rafael Lange |
 | `dist/public/favicon.jpg`, `favicon.png` | Ícone da aba (símbolo de Sangue) | Oficial | © Rafael Lange |
-| `dist/public/opengraph.jpg` | Miniatura de link (Open Graph) | ⚠️ a preencher | ⚠️ a preencher |
+| `dist/public/opengraph.jpg` | Miniatura de link (Open Graph) | (https://fonts.google.com/) | Fonts-google|
 | `dist/public/assets/moldura-sangue.png` | Moldura hexagonal (Sangue) | *Arquivos Secretos* (extra oficial) — Jambô Editora | Equipe de arte de *Arquivos Secretos* (dir.: Dan Ramos) |
 | `dist/public/assets/moldura-morte.png` | Moldura hexagonal (Morte) | *Arquivos Secretos* — Jambô Editora | Equipe de arte de *Arquivos Secretos* |
 | `dist/public/assets/moldura-conhecimento.png` | Moldura hexagonal (Conhecimento) | *Arquivos Secretos* — Jambô Editora | Equipe de arte de *Arquivos Secretos* |
@@ -524,8 +524,8 @@ Usado sob a [Licença da Comunidade](https://ordemparanormal.com.br/licenca).
 | `licenca/selo-op-comunidade-*.png` | Selo da Licença da Comunidade | Jambô / Cellbit ([ordemparanormal.com.br/licenca](https://ordemparanormal.com.br/licenca)) | © Rafael Lange |
 | `docs/*.png` | Capturas de tela deste README | Interface do próprio app | Este repositório |
 
-**Fontes tipográficas:** ainda não identificadas (o build não traz `@font-face`).
-`⚠️ a preencher` — e confira se a licença de cada fonte permite redistribuição.
+**Fontes tipográficas:** Utilizadas fonts pela https://fonts.google.com/).
+
 
 Se for usar em live, gravação ou fork público: mantenha o crédito ao
 [@regyyh](https://github.com/regyyh), o link do repositório original e o
