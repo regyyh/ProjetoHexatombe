@@ -10,6 +10,55 @@ personagens, ótima pra deixar numa segunda tela ou na live.
 > Este repositório já vem com o site **compilado** (pasta `dist/`). Você não precisa
 > "buildar" nada — só rodar o servidor e apontar pra um banco de dados MongoDB.
 
+> **Projeto original:** [@regyyh](https://github.com/regyyh) (Discord: `regyyh`) —
+> <https://github.com/regyyh/ProjetoHexatombe>
+
+---
+
+## Como é o app
+
+| Tela inicial (seleção de fichas) | No celular |
+|---|---|
+| ![Tela inicial](docs/tela-inicial.png) | ![No celular](docs/celular.png) |
+
+Cada linha é um **slot** (`ficha1`, `ficha2`, …) com o nome do personagem, a data
+da última alteração e um cadeado quando a ficha tem **senha**. Os botões de baixo
+criam uma **Nova Ficha** ou abrem a página de **Retratos**.
+
+### Dentro da ficha
+
+A ficha é dividida em abas. À esquerda ficam sempre o retrato, atributos, **PV**
+(vida), **PD** (pontos de determinação/esforço), sanidade, defesa e resistências.
+
+| Combate | Perícias |
+|---|---|
+| ![Aba Combate](docs/ficha-combate.png) | ![Aba Perícias](docs/ficha-pericias.png) |
+
+| Rituais | Inventário |
+|---|---|
+| ![Aba Rituais](docs/ficha-rituais.png) | ![Aba Inventário](docs/ficha-inventario.png) |
+
+- **Combate:** armas e ataques (dano, crítico, alcance, tipo de ação).
+- **Perícias:** treino + bônus de cada perícia, com o total calculado.
+- **Poderes / Rituais:** habilidades e rituais, com círculo, elemento e custo em PE.
+- **Inventário:** itens, carga atual, patente e categorias.
+- **Descrição:** história e anotações livres do personagem.
+
+Tudo é salvo automaticamente no servidor (o indicador **"Salvando…"** aparece no
+topo). No celular o mesmo layout vira uma coluna só, com um seletor de aba no topo:
+
+| Ficha no celular | Aba no celular |
+|---|---|
+| ![Ficha no celular](docs/ficha-mobile-topo.png) | ![Aba Rituais no celular](docs/ficha-mobile-rituais.png) |
+
+### Página de Retratos (`/portraits`) — para lives e gravações
+
+![Página de retratos](docs/retratos.png)
+
+Mostra os retratos dos personagens em molduras hexagonais com a vida atual. Feita
+para entrar como **fonte de navegador no OBS** (fundo branco, sem interface). Veja
+a seção [Uso em lives / gravações](#uso-em-lives--gravações).
+
 ---
 
 ## Índice
@@ -21,9 +70,11 @@ personagens, ótima pra deixar numa segunda tela ou na live.
 5. [Opção C — Docker (self-host completo, banco incluso)](#opção-c--docker-self-host-completo-banco-incluso)
 6. [Variáveis de ambiente](#variáveis-de-ambiente)
 7. [Usando na mesa](#usando-na-mesa)
-8. [Mantendo seu fork atualizado](#mantendo-seu-fork-atualizado)
-9. [E o GitHub Pages?](#e-o-github-pages)
-10. [Problemas comuns (FAQ)](#problemas-comuns-faq)
+8. [Uso em lives / gravações](#uso-em-lives--gravações)
+9. [Mantendo seu fork atualizado](#mantendo-seu-fork-atualizado)
+10. [E o GitHub Pages?](#e-o-github-pages)
+11. [Problemas comuns (FAQ)](#problemas-comuns-faq)
+12. [Créditos](#créditos)
 
 ---
 
@@ -280,6 +331,46 @@ Depois que o site está no ar (qualquer opção acima), o fluxo para os jogadore
 
 ---
 
+## Uso em lives / gravações
+
+O projeto tem uma página feita pra aparecer na transmissão: **`/portraits`**
+(ex.: `https://sua-url/portraits`). Ela mostra só os retratos dos personagens e a
+vida atual, com **fundo branco** e sem nenhuma interface — pensada para virar
+_overlay_ no OBS.
+
+### Colocando no OBS Studio
+
+1. Deixe a sua ficha no ar por qualquer uma das opções deste tutorial.
+2. No OBS: **Fontes** → **+** → **Navegador**.
+3. Em **URL**, coloque `https://sua-url/portraits`.
+4. Largura/altura a gosto (ex.: `1920 × 1080`).
+5. Para deixar o fundo **transparente** em vez de branco, cole isto no campo
+   **CSS personalizado** da fonte:
+
+   ```css
+   body { background: transparent !important; margin: 0; overflow: hidden; }
+   ```
+
+6. Os retratos e a vida se atualizam sozinhos conforme a mesa edita as fichas — não
+   precisa ficar recarregando a fonte.
+
+### Se você postar a gravação ou fizer live
+
+Se for divulgar o vídeo, o stream ou uma versão modificada, dá uma força pro autor:
+
+- **Marque [@regyyh](https://github.com/regyyh)** (Discord: `regyyh`).
+- **Deixe o link do repositório original** na descrição:
+  <https://github.com/regyyh/ProjetoHexatombe>
+
+O projeto é gratuito; esse crédito é o que mantém a coisa viva. 🙏
+
+> **Privacidade:** a página `/portraits` e as fichas ficam acessíveis para qualquer
+> pessoa que tiver o link. Se não quiser que a plateia mexa nas fichas durante a
+> live, ponha **senha** em cada slot (ver [Usando na mesa](#usando-na-mesa)) e evite
+> mostrar a URL na tela.
+
+---
+
 ## Mantendo seu fork atualizado
 
 Quando este projeto original receber novidades, atualize o seu fork:
@@ -289,7 +380,7 @@ Quando este projeto original receber novidades, atualize o seu fork:
 - **Pelo terminal:**
 
   ```bash
-  git remote add upstream https://github.com/DONO-ORIGINAL/ProjetoHexatombe.git
+  git remote add upstream https://github.com/regyyh/ProjetoHexatombe.git
   git fetch upstream
   git merge upstream/main
   git push
@@ -343,3 +434,15 @@ Railway/Fly/Koyeb, ou um plano pago do próprio Render.
 
 **Dois jogadores usaram o mesmo slot e um sobrescreveu o outro.**
 Combinem os números antes e/ou ponham **senha** em cada slot.
+
+---
+
+## Créditos
+
+- **Projeto original:** [@regyyh](https://github.com/regyyh) — Discord: `regyyh`
+- **Repositório original (upstream):** <https://github.com/regyyh/ProjetoHexatombe>
+- _Ordem Paranormal_ é uma criação de Rafael Lange (Cellbit). Este é um projeto de
+  fã, sem fins lucrativos.
+
+Se for usar em live, gravação ou fork público, mantenha o crédito ao
+[@regyyh](https://github.com/regyyh) e o link do repositório original.
