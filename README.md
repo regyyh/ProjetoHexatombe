@@ -1,5 +1,9 @@
 # Ficha OP — Hexatombe
 
+> Este é um conteúdo não oficial, publicado sob a
+> [Licença da Comunidade de Ordem Paranormal](https://ordemparanormal.com.br/licenca).
+> Projeto de fã, sem fins lucrativos. **Não oficial. Não canônico.**
+
 Ficha de personagem online para as suas mesas de **Ordem Paranormal**.
 
 Cada ficha fica guardada num **slot numerado** e pode ter uma **senha**. Todo mundo
@@ -47,9 +51,9 @@ A ficha é dividida em abas. À esquerda ficam sempre o retrato, atributos, **PV
 Tudo é salvo automaticamente no servidor (o indicador **"Salvando…"** aparece no
 topo). No celular o mesmo layout vira uma coluna só, com um seletor de aba no topo:
 
-| Ficha no celular | Aba no celular |
-|---|---|
-| ![Ficha no celular](docs/ficha-mobile-topo.png) | ![Aba Rituais no celular](docs/ficha-mobile-rituais.png) |
+| Topo da ficha | Aba Combate | Aba Rituais |
+|---|---|---|
+| ![Ficha no celular](docs/ficha-mobile-topo.png) | ![Combate no celular](docs/ficha-mobile-combate.png) | ![Rituais no celular](docs/ficha-mobile-rituais.png) |
 
 ### Página de Retratos (`/portraits`) — para lives e gravações
 
@@ -74,7 +78,8 @@ a seção [Uso em lives / gravações](#uso-em-lives--gravações).
 9. [Mantendo seu fork atualizado](#mantendo-seu-fork-atualizado)
 10. [E o GitHub Pages?](#e-o-github-pages)
 11. [Problemas comuns (FAQ)](#problemas-comuns-faq)
-12. [Créditos](#créditos)
+12. [Licença](#licença)
+13. [Créditos](#créditos)
 
 ---
 
@@ -361,6 +366,9 @@ Se for divulgar o vídeo, o stream ou uma versão modificada, dá uma força pro
 - **Marque [@regyyh](https://github.com/regyyh)** (Discord: `regyyh`).
 - **Deixe o link do repositório original** na descrição:
   <https://github.com/regyyh/ProjetoHexatombe>
+- Deixe visível o **selo "Não Oficial / Não Canônico"** (em [`licenca/`](licenca/))
+  ou o aviso da [Licença da Comunidade](#licença) — pode ser como imagem fixa no
+  layout do OBS, num canto do overlay.
 
 O projeto é gratuito; esse crédito é o que mantém a coisa viva. 🙏
 
@@ -437,12 +445,90 @@ Combinem os números antes e/ou ponham **senha** em cada slot.
 
 ---
 
+## Licença
+
+Este repositório tem **duas camadas**:
+
+| O quê | Licença |
+|---|---|
+| **Código** (servidor, build, scripts) | [MIT](LICENSE) — © 2026 [@regyyh](https://github.com/regyyh) |
+| **Ordem Paranormal** (universo, nomes e símbolos dos elementos, estética, termos de sistema) + **todas as imagens e fontes** do site | [Licença da Comunidade de Ordem Paranormal](https://ordemparanormal.com.br/licenca) — obra de Rafael "Cellbit" Lange / e artistas da comunidade (ver tabela abaixo) |
+
+A licença MIT vale **só para o código**. As artes e o material de Ordem Paranormal
+**não** são MIT.
+
+**O que a Licença da Comunidade exige de qualquer fork/publicação:**
+
+- Mostrar o **selo "Não Oficial / Não Canônico"** (mín. 10% da largura, 100% de
+  opacidade) **ou** o texto
+  *"Este é um conteúdo não oficial, publicado sob a Licença da Comunidade de Ordem Paranormal"*
+  logo abaixo do título. Selo em [`licenca/`](licenca/).
+- Uso **não comercial** (não cobrar pelo acesso).
+- Não sugerir que é oficial ou aprovado pela Jambô / Cellbit.
+- **Não reproduzir imagens dos livros oficiais.**
+
+> ⚠️ **Para quem forka:** o `dist/public/` embute símbolos oficiais dos elementos,
+> o diagrama de atributos e molduras dos *Arquivos Secretos*. Isso esbarra no
+> "não reproduzir imagens oficiais". O mais seguro é **trocar essas artes pelas
+> suas** e manter o selo visível na interface (o `dist/` aqui é build fechado — dá
+> pra sobrepor o selo pelo OBS, mas o certo é rebuildar a partir do fonte com o
+> selo dentro do app).
+
+---
+
 ## Créditos
 
-- **Projeto original:** [@regyyh](https://github.com/regyyh) — Discord: `regyyh`
-- **Repositório original (upstream):** <https://github.com/regyyh/ProjetoHexatombe>
-- _Ordem Paranormal_ é uma criação de Rafael Lange (Cellbit). Este é um projeto de
-  fã, sem fins lucrativos.
+**Código / projeto:** [@regyyh](https://github.com/regyyh) (Discord: `regyyh`) —
+repositório original: <https://github.com/regyyh/ProjetoHexatombe>
 
-Se for usar em live, gravação ou fork público, mantenha o crédito ao
-[@regyyh](https://github.com/regyyh) e o link do repositório original.
+**Ordem Paranormal** — universo, os 5 elementos e seus símbolos, estética e termos
+de sistema (NEX, PV, PD, PE, Perícias, Rituais, DT…): criação de **Rafael "Cellbit"
+Lange**, © 2022, todos os direitos reservados. RPG publicado pela **Jambô Editora**.
+Usado sob a [Licença da Comunidade](https://ordemparanormal.com.br/licenca).
+
+**Equipes de arte oficiais** (de onde vêm os símbolos, o diagrama de atributos e as molduras):
+
+- *Ordem Paranormal RPG — Livro de Regras*: arte interna de Akila Gabriel, Danilo
+  "Orenjiro" Murakami, Dan Ramos, Kael e Jottah Designer; logo, projeto gráfico e
+  diagramação de **Dan Ramos**.
+- *Arquivos Secretos* (suplementos oficiais — origem das **molduras**): direção de
+  arte de **Dan Ramos**; ilustrações de Dan Ramos, Gabriel Feitosa, Heitor Aquino,
+  Janio Garcia, Lara "Rarinha", Marina "Nina" Theisen, Vic Terra e Vinícius
+  "Oceanin" Rafael.
+
+### Tabela de imagens do site
+
+> Boa parte das artes foi **coletada do Twitter/X pela comunidade** e a procedência
+> individual não foi registrada na época. As linhas marcadas `⚠️ a preencher`
+> precisam do link/@ de quem publicou — se você reconhece ou é o autor, abra uma
+> [issue](https://github.com/regyyh/ProjetoHexatombe/issues) para receber crédito
+> ou pedir remoção.
+
+| Arquivo | O que é | Fonte | Autor / crédito |
+|---|---|---|---|
+| `dist/public/sangue.jpg` | Símbolo do elemento Sangue | Twitter/X (comunidade) | ⚠️ a preencher — símbolo © Rafael Lange |
+| `dist/public/morte.jpg` | Símbolo do elemento Morte | Twitter/X (comunidade) | ⚠️ a preencher — símbolo © Rafael Lange |
+| `dist/public/conhecimento.jpg` | Símbolo do elemento Conhecimento | Twitter/X (comunidade) | ⚠️ a preencher — símbolo © Rafael Lange |
+| `dist/public/energia.jpg` | Símbolo do elemento Energia | Twitter/X (comunidade) | ⚠️ a preencher — símbolo © Rafael Lange |
+| `dist/public/medo.jpg` | Símbolo do elemento Medo | Twitter/X (comunidade) | ⚠️ a preencher — símbolo © Rafael Lange |
+| `dist/public/atributos.png` | Diagrama hexagonal "ATRIBUTOS" | Identidade visual oficial do RPG | Projeto gráfico: Dan Ramos / Jambô — © Rafael Lange |
+| `dist/public/favicon.jpg`, `favicon.png` | Ícone da aba (símbolo de Sangue) | Oficial | © Rafael Lange |
+| `dist/public/opengraph.jpg` | Miniatura de link (Open Graph) | ⚠️ a preencher | ⚠️ a preencher |
+| `dist/public/assets/moldura-sangue.png` | Moldura hexagonal (Sangue) | *Arquivos Secretos* (extra oficial) — Jambô Editora | Equipe de arte de *Arquivos Secretos* (dir.: Dan Ramos) |
+| `dist/public/assets/moldura-morte.png` | Moldura hexagonal (Morte) | *Arquivos Secretos* — Jambô Editora | Equipe de arte de *Arquivos Secretos* |
+| `dist/public/assets/moldura-conhecimento.png` | Moldura hexagonal (Conhecimento) | *Arquivos Secretos* — Jambô Editora | Equipe de arte de *Arquivos Secretos* |
+| `dist/public/assets/moldura-energia.png` | Moldura hexagonal (Energia) | *Arquivos Secretos* — Jambô Editora | Equipe de arte de *Arquivos Secretos* |
+| `dist/public/assets/fundope.png` | Textura de fumaça (fundo) | ⚠️ a preencher | ⚠️ a preencher |
+| `dist/public/assets/portrait-bg.png` | Fundo esfumaçado dos retratos | ⚠️ a preencher | ⚠️ a preencher |
+| Retratos em `/portraits` (vêm do banco) | Arte de cada personagem | Enviados pelo mestre / jogadores | Crédito é de quem sobe a imagem |
+| `licenca/selo-op-comunidade-*.png` | Selo da Licença da Comunidade | Jambô / Cellbit ([ordemparanormal.com.br/licenca](https://ordemparanormal.com.br/licenca)) | © Rafael Lange |
+| `docs/*.png` | Capturas de tela deste README | Interface do próprio app | Este repositório |
+
+**Fontes tipográficas:** ainda não identificadas (o build não traz `@font-face`).
+`⚠️ a preencher` — e confira se a licença de cada fonte permite redistribuição.
+
+Se for usar em live, gravação ou fork público: mantenha o crédito ao
+[@regyyh](https://github.com/regyyh), o link do repositório original e o
+selo/aviso da Licença da Comunidade.
+
+![Selo Não Oficial da Licença da Comunidade de Ordem Paranormal](licenca/selo-op-comunidade-preto.png)

@@ -1,0 +1,45 @@
+MIT License
+
+Copyright (c) 2026 regyyh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---------------------------------------------------------------------------
+
+NOTA IMPORTANTE (escopo desta licença)
+
+A licença MIT acima cobre SOMENTE o código-fonte deste repositório
+(servidor, build do frontend e scripts).
+
+Ela NÃO cobre:
+
+  * As imagens em dist/public/ e dist/public/assets/ (símbolos dos elementos,
+    molduras, fundos, ícones) e os retratos de personagens.
+  * As fontes tipográficas.
+  * Qualquer elemento de "Ordem Paranormal": universo, personagens, nomes e
+    símbolos dos elementos, estética e terminologia de sistema.
+
+"Ordem Paranormal" é uma criação de Rafael "Cellbit" Lange, que detém os
+direitos autorais da obra. O uso desse material neste projeto se dá sob a
+Licença da Comunidade de Ordem Paranormal:
+
+    https://ordemparanormal.com.br/licenca
+
+Este é um projeto de fãs, sem fins lucrativos, NÃO OFICIAL e NÃO CANÔNICO.
+Detalhes de atribuição de cada imagem estão na seção "Créditos" do README.md.
