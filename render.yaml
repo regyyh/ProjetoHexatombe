@@ -1,0 +1,16 @@
+# Blueprint do Render — https://render.com/docs/blueprint-spec
+# No painel do Render: New + -> Blueprint -> escolha o seu fork.
+# Depois defina o valor de MONGODB_URI quando for pedido.
+services:
+  - type: web
+    name: ficha-op
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false

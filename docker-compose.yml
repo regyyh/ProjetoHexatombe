@@ -1,0 +1,24 @@
+# Sobe o app + um MongoDB local com um comando:
+#   docker compose up -d
+# Depois abra http://localhost:8080
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      MONGODB_URI: "mongodb://mongo:27017/fichaop"
+      PORT: "8080"
+      NODE_ENV: "production"
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:
